@@ -1,3 +1,5 @@
+This is imported from https://bitbucket.org/samuel.lai/stackdump/src. the original author didn't update his code.
+
 h1. Stackdump - an offline browser for StackExchange sites.
 
 Stackdump was conceived for those who work in environments that do not have easy access to the StackExchange family of websites. It allows you to host a read-only instance of the StackExchange sites locally, accessible via a web browser.
