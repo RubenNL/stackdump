@@ -849,7 +849,7 @@ def import_site(xml_root, site_name, dump_date, site_desc, site_key,
     # Processing of badges has been disabled because they don't offer any useful
     # information in the offline situation.
     #print('[badge] PARSING BADGES...')
-    #xml_path = get_file_path(xml_root, 'badges.xml')
+    #xml_path = get_file_path(xml_root, 'Badges.xml')
     #print('[badge] start parsing badges.xml...')
     #handler = BadgeContentHandler(conn, site)
     #xml.sax.parse(xml_path, handler)
@@ -860,7 +860,7 @@ def import_site(xml_root, site_name, dump_date, site_desc, site_key,
     # comments are temporarily stored in the database for retrieval when parsing
     # posts only.
     print('[comment] PARSING COMMENTS...')
-    xml_path = get_file_path(xml_root, 'comments.xml')
+    xml_path = get_file_path(xml_root, 'Comments.xml')
     print('[comment] start parsing comments.xml...')
     handler = CommentContentHandler(temp_db_conn, site)
     xml.sax.parse(xml_path, handler)
@@ -869,7 +869,7 @@ def import_site(xml_root, site_name, dump_date, site_desc, site_key,
 
     # USERS
     print('[user] PARSING USERS...')
-    xml_path = get_file_path(xml_root, 'users.xml')
+    xml_path = get_file_path(xml_root, 'Users.xml')
     print('[user] start parsing users.xml...')
     handler = UserContentHandler(conn, site)
     xml.sax.parse(xml_path, handler)
@@ -879,7 +879,7 @@ def import_site(xml_root, site_name, dump_date, site_desc, site_key,
     # POSTS
     # posts are added directly to the Solr index; they are not added to the database.
     print('[post] PARSING POSTS...')
-    xml_path = get_file_path(xml_root, 'posts.xml')
+    xml_path = get_file_path(xml_root, 'Posts.xml')
     print('[post] start parsing posts.xml...')
     handler = PostContentHandler(solr, site)
     xml.sax.parse(xml_path, handler)

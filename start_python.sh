@@ -26,7 +26,7 @@ function checkPythonVersion {
 
 # MAIN
 SCRIPT_DIR=`dirname $0`
-PYTHON_CMD=python
+PYTHON_CMD=python2
 
 # if there is a PYTHON_CMD file in the script directory, use that instead
 if [ -e "$SCRIPT_DIR/PYTHON_CMD" ]
