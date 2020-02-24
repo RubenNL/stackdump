@@ -8,6 +8,7 @@ Stackdump comprises of two components - the search indexer ("Apache Solr":http:/
 
 h2. Screenshots
 
+(the urls are broken, but kept for future reference)
 "Stackdump home":http://edgylogic.com/dynmedia/301/
 "Stackdump search results":http://edgylogic.com/dynmedia/303/
 "Stackdump question view":http://edgylogic.com/dynmedia/302/
@@ -21,6 +22,7 @@ Besides that, there are no OS-dependent dependencies and should work on any plat
 You will also need "7-zip":http://www.7-zip.org/ to extract the data dump files, but Stackdump does not use it directly so you can perform the extraction on another machine first.
 
 The amount of memory required for Stackdump depends on which dataset you want to import. For most datasets, at least 3GB of RAM is preferable. If you want to import StackOverflow, you must use a 64-bit operating system and a 64-bit version of Python, and also have at least 6GB of RAM available (or swap). If you do not have enough RAM available, the import process will likely fail with a _MemoryError_ message at some point.
+*6gb isn't even enough. use the scripts "here":https://github.com/RubenNL/stackdump-lowram to import stackoverflow, if you don't have around 64gb of ram.*
 
 Make sure you have enough disk space too - having at least roughly the space used by the raw, extracted, data dump XML files available is a good rule of thumb (note that once imported, the raw data dump XML files are not needed by Stackdump any more).
 
@@ -58,6 +60,10 @@ I attempted this on a similarly spec'ed Windows 7 64-bit VM as well - 23 hours l
 h3. Reports on importing the StackOverflow data dump, September 2014
 
 Due to the growth of the dataset, the import process now requires at least 6GB of RAM. This also means you must use a 64-bit operating system and a 64-bit version of Python.
+
+h3. Reports on importing the StackOverflow data dump, Januari 2020
+
+Don't try importing stackoverflow without using "stackdump-lowram":https://github.com/RubenNL/stackdump-lowram . It won't work.
 
 h2. Setting up
 
